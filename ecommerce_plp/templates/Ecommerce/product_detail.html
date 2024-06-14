@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{product.name}}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+</head>
+<body>
+  
+  <ul>
+
+    {% for product in product %}
+    <li>
+     <h1>{{product.name}}</h1>
+     <p>{{ product.description}}</p>
+    <p>Price: Ksh.{{product.price}}</p>
+    <p>Available: {{<product class="availability"></product> | yesno:"Yes,No"}}</p>
+    <img src="{{ product.image.url}}" alt="{{product.name}}">
+
+    </li>
+{ endfor }
+  </ul>
+</body>
+</html>
