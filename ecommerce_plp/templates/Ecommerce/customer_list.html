@@ -11,9 +11,13 @@
   <ul>
 {% for customer in customers%}
 <li>
-    <a href="{% url 'customer_detail' customer.pk%}">{{ customer.first_name}} {{customer.last_name}} {{customer.email}}</a>
+    <a href="{% url 'ecommerce_plp:customer_detail' customer.pk%}">{{ customer.first_name}} {{customer.last_name}} {{customer.email}}</a>
 </li>
 {% endfor %}
   </ul>
+  <a href="{% url 'ecommerce_plp:home' %}" class="back-link">
+  Back to customer home
+</a>
+
 </body>
 </html>
